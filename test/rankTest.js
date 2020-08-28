@@ -494,3 +494,64 @@ rankTest(
       t.is("B", result);
     }
 );
+
+rankTest(
+    "rating case 7 Voyage length is 20 and zone is east-indies. History length is 12",
+    (t) => {
+      //given
+      const voyage = {
+        zone: "east-indies",
+        length: 20,
+      };
+      const history = [
+        {
+          zone: "east-indies",
+          profit: 5,
+        },
+        {
+          zone: "west-indies",
+          profit: 15,
+        },
+        {
+          zone: "china",
+          profit: -2,
+        },
+        {
+          zone: "west-africa",
+          profit: 7,
+        },
+        {
+          zone: "east-indies",
+          profit: 5,
+        },
+        {
+          zone: "west-indies",
+          profit: 15,
+        },
+        {
+          zone: "china",
+          profit: -2,
+        },
+        {
+          zone: "west-africa",
+          profit: 7,
+        },
+        {
+          zone: "west-indies",
+          profit: 15,
+        },
+        {
+          zone: "china",
+          profit: -2,
+        },
+        {
+          zone: "west-africa",
+          profit: 7,
+        },
+      ];
+      //when
+      const result = rating(voyage, history);
+      //then
+      t.is("B", result);
+    }
+);
