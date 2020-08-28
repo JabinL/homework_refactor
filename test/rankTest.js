@@ -41,3 +41,12 @@ rankTest('voyageRisk case4: voyage.length > 4,voyage.length <= 8 ', t => {
   const result = voyageRisk(voyage);
   t.is(result,3 );
 });
+
+rankTest('voyageRisk case5: voyage.length > 8, voyage.zone = china ', t => {
+  const voyage = {
+    zone: 'china',
+    length: 9,
+  };
+  const result = voyageRisk(voyage);
+  t.is(result,8 );
+});
