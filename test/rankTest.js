@@ -5,7 +5,7 @@ const { voyageRisk,
   rating} = require('../src/rank');
 
 
-rankTest('voyageRisk case1: voyage.length < 0', t => {
+rankTest('voyageRisk case1: voyage.length < 4', t => {
   const voyage = {
     zone: 'west-indies',
     length: 3,
@@ -13,4 +13,11 @@ rankTest('voyageRisk case1: voyage.length < 0', t => {
   const result = voyageRisk(voyage);
   t.is(result,1 );
 });
-
+rankTest('voyageRisk case2: voyage.length < 4, voyage.zone = china ', t => {
+  const voyage = {
+    zone: 'china',
+    length: 3,
+  };
+  const result = voyageRisk(voyage);
+  t.is(result,5 );
+});
