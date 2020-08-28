@@ -50,3 +50,12 @@ rankTest('voyageRisk case5: voyage.length > 8, voyage.zone = china ', t => {
   const result = voyageRisk(voyage);
   t.is(result,8 );
 });
+
+rankTest('voyageRisk case6: voyage.length > 8 ', t => {
+  const voyage = {
+    zone: 'west-indies',
+    length: 9,
+  };
+  const result = voyageRisk(voyage);
+  t.is(result,4 );
+});
