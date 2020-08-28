@@ -1,11 +1,11 @@
+function calculateResultByLengthOfVoyage(voyage, tmp, count) {
+  return voyage.length > tmp ? count : 0;
+}
 function voyageRisk (voyage) {
+
   let result = 1;
-  if (voyage.length > 4) {
-    result += 2;
-  }
-  if (voyage.length > 8) {
-    result += voyage.length - 8;
-  }
+  result += calculateResultByLengthOfVoyage(voyage, 4, 2);
+  result += calculateResultByLengthOfVoyage(voyage, 8, voyage.length - 8);
   if ([
     'china',
     'east-indies',
