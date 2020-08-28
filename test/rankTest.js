@@ -84,3 +84,28 @@ rankTest('captainHistoryRisk case1: history.length < 5 vayage.zone !== china ', 
   const result = captainHistoryRisk(voyage,history);
   t.is(result,6 );
 });
+
+rankTest('captainHistoryRisk case2: history.length < 5 vayage.zone === china history haschina ', t => {
+  const voyage = {
+    zone: 'china',
+    length: 9,
+  };
+  const history = [
+    {
+      zone: 'easndies',
+      profit: 5,
+    },{
+      zone: 'west-indies',
+      profit: 15,
+    },{
+      zone: 'china',
+      profit: -2,
+    },
+    {
+      zone: 'west-africa',
+      profit: 7,
+    },
+  ];
+  const result = captainHistoryRisk(voyage,history);
+  t.is(result,4 );
+});
