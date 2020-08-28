@@ -332,9 +332,42 @@ rankTest(
         zone: "china",
         length: 2,
       };
-
+      const history= [
+        {
+          zone: "east-indies",
+          profit: 5,
+        },
+        {
+          zone: "west-indies",
+          profit: 15,
+        },
+        {
+          zone: "china",
+          profit: -2,
+        },
+        {
+          zone: "west-africa",
+          profit: 7,
+        },
+        {
+          zone: "east-indies",
+          profit: 5,
+        },
+        {
+          zone: "west-indies",
+          profit: 15,
+        },
+        {
+          zone: "china",
+          profit: -2,
+        },
+        {
+          zone: "west-africa",
+          profit: 7,
+        },
+      ];
       //when
-      const result = rating(voyage, historyL);
+      const result = rating(voyage, history);
       //then
       t.is("A", result);
     }
