@@ -323,3 +323,19 @@ rankTest(
       t.is("B", result);
     }
 );
+
+rankTest(
+    "rating case4 Voyage length is 2 and zone is china. History length is 8",
+    (t) => {
+      //given
+      const voyage = {
+        zone: "china",
+        length: 2,
+      };
+
+      //when
+      const result = rating(voyage, historyL);
+      //then
+      t.is("A", result);
+    }
+);
