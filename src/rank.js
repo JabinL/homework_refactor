@@ -1,17 +1,19 @@
 function calculateResultByLengthOfVoyage(voyage, tmp, count) {
   return voyage.length > tmp ? count : 0;
 }
+
+function calculateResultByZoneOfVoyage(voyage, count) {
+  return [
+    'china',
+    'east-indies',
+  ].includes(voyage.zone) ? count : 0;
+}
 function voyageRisk (voyage) {
 
   let result = 1;
   result += calculateResultByLengthOfVoyage(voyage, 4, 2);
   result += calculateResultByLengthOfVoyage(voyage, 8, voyage.length - 8);
-  if ([
-    'china',
-    'east-indies',
-  ].includes(voyage.zone)) {
-    result += 4;
-  }
+  result += calculateResultByZoneOfVoyage(voyage, 4)
   return Math.max(result, 0);
 }
 
