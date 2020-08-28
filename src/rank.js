@@ -75,6 +75,12 @@ function rating (voyage, history) {
 }
 
 module.exports = {
+  voyageRisk,
+  captainHistoryRisk,
+  voyageProfitFactor,
+  rating,
+
+
 };
 
 const voyage = {
@@ -83,7 +89,7 @@ const voyage = {
 };
 const history = [
   {
-    zone: 'east-indies',
+    zone: 'easndies',
     profit: 5,
   },{
     zone: 'west-indies',
