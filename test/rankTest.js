@@ -33,4 +33,11 @@ rankTest('voyageRisk case3: voyage.length > 4,voyage.length <= 8, voyage.zone = 
   t.is(result,7 );
 });
 
-
+rankTest('voyageRisk case4: voyage.length > 4,voyage.length <= 8 ', t => {
+  const voyage = {
+    zone: 'west-indies',
+    length: 5,
+  };
+  const result = voyageRisk(voyage);
+  t.is(result,3 );
+});
